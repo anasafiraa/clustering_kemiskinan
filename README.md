@@ -1,86 +1,88 @@
-# Application of the Clustering Method as a Special Handling Strategy for Poverty in Jakarta
-## Description
-This project aims to apply the K-Means and Agglomerative Clustering algorithms to cluster regions in DKI Jakarta based on poverty levels. The data used includes factors such as the percentage of poor people, unemployment rate, per capita expenditure, average years of schooling (RLS), and Human Development Index (HDI) collected from the DKI Jakarta Central Bureau of Statistics (BPS) during the period 2011-2022.
-By using clustering, this project helps the DKI Jakarta government to identify areas that need special handling based on the poverty patterns found in the data.
+# Penerapan Metode Clustering sebagai Strategi Penanganan Khusus Kemiskinan di Jakarta
 
-## Objective
-- Analyzing poverty data in DKI Jakarta to identify regions that have similar poverty patterns.
-- Apply a clustering algorithm to divide these regions into clusters based on poverty characteristics.
-- Provide recommendations for poverty management strategies based on the clustering results.
+## Deskripsi
+Proyek ini bertujuan untuk menerapkan algoritma K-Means dan Agglomerative Clustering dalam mengelompokkan wilayah di DKI Jakarta berdasarkan tingkat kemiskinan. Data yang digunakan mencakup berbagai faktor seperti persentase penduduk miskin, tingkat pengangguran, pengeluaran per kapita, rata-rata lama sekolah (RLS), serta Indeks Pembangunan Manusia (IPM). Data ini dikumpulkan dari Badan Pusat Statistik (BPS) DKI Jakarta selama periode 2011-2022. Dengan metode klasterisasi, proyek ini membantu Pemerintah DKI Jakarta mengidentifikasi wilayah yang membutuhkan penanganan khusus berdasarkan pola kemiskinan yang ditemukan dalam data.
+
+## Tujuan
+- Menganalisis data kemiskinan di DKI Jakarta untuk mengidentifikasi wilayah yang memiliki pola kemiskinan serupa.
+- Menerapkan algoritma klasterisasi untuk mengelompokkan wilayah berdasarkan karakteristik kemiskinan.
+- Memberikan rekomendasi strategi penanganan kemiskinan berdasarkan hasil klasterisasi.
 
 ## Dataset
-The dataset used in this project is data from the Central Bureau of Statistics of DKI Jakarta Province with the following variables:
-- Percentage of Poor Population (%) - Percentage of the population that has per capita expenditure below the poverty line.
-- Unemployment Rate (%) - The percentage of the number of unemployed people to the total labor force.
-- Average Years of Schooling (RLS) (years) - The number of years of education taken by the population.
-- Per Capita Expenditure (thousand rupiah) - Average expenditure per capita per month, which is an indicator of purchasing power.
-- Human Development Index (HDI) - An index that reflects the quality of life through education, health, and decent living standards.
+Dataset yang digunakan berasal dari BPS DKI Jakarta dengan variabel sebagai berikut:
+- Persentase Penduduk Miskin (%) – Persentase penduduk yang memiliki pengeluaran per kapita di bawah garis kemiskinan.
+- Tingkat Pengangguran (%) – Persentase jumlah pengangguran terhadap total angkatan kerja.
+- Rata-rata Lama Sekolah (RLS) (tahun) – Jumlah tahun pendidikan yang telah ditempuh oleh penduduk.
+- Pengeluaran Per Kapita (ribu rupiah) – Rata-rata pengeluaran per kapita per bulan yang mencerminkan daya beli masyarakat.
+- Indeks Pembangunan Manusia (IPM) – Indeks yang mencerminkan kualitas hidup melalui pendidikan, kesehatan, dan standar hidup layak.
 
-## Methods
-This project uses the following two clustering algorithms to analyze the data:
-1. K-Means Clustering
-K-Means is a clustering algorithm that divides data into a predetermined number of clusters. In this project, K-Means is used to identify poverty patterns based on the available data. The selection of the optimal number of clusters is done using the Elbow Method and Silhouette Score techniques.
-2. Agglomerative Clustering
-Agglomerative Clustering is a hierarchical clustering method that does not require a predetermined number of clusters. Dendrogram is used to determine the optimal number of clusters based on the distance between clusters.
+## Metode
+Proyek ini menggunakan dua algoritma klasterisasi untuk menganalisis data:
+- K-Means Clustering
+  - Algoritma K-Means membagi data ke dalam sejumlah klaster yang telah ditentukan sebelumnya. Dalam proyek ini, K-Means digunakan untuk mengidentifikasi pola kemiskinan berdasarkan data yang tersedia.
+  - Penentuan jumlah klaster optimal dilakukan dengan metode Elbow Method dan Silhouette Score.
+- Agglomerative Clustering
+  - Metode klasterisasi hierarkis yang tidak memerlukan jumlah klaster yang ditentukan sebelumnya.
+  - Dendrogram digunakan untuk menentukan jumlah klaster optimal berdasarkan jarak antar klaster.
 
-## Implementation Steps
-- Data Preprocessing:
-  - Checking and cleaning the data from missing or duplicate values.
-  - Standardizing the data so that all variables have the same scale, if required.
-- Application of K-Means:
-  - Determining the number of clusters using Elbow Method and Silhouette Score.
-  - Apply the K-Means Clustering algorithm   and visualize the results.
-- Application of Agglomerative Clustering:
-  - Building a dendrogram to help select the optimal number of clusters.
-  - Apply Agglomerative Clustering and visualize the results.
-- Analysis and Handling:
-After the areas are grouped into clusters, further analysis is conducted to provide recommendations for poverty reduction strategies for each cluster.
+## Tahapan Implementasi
+- Pra-Pemrosesan Data:
+  - Memeriksa dan membersihkan data dari nilai yang hilang atau duplikat.
+  - Melakukan standarisasi data agar semua variabel memiliki skala yang seragam, jika diperlukan.
+- Penerapan K-Means:
+  - Menentukan jumlah klaster menggunakan Elbow Method dan Silhouette Score.
+  - Menerapkan algoritma K-Means dan memvisualisasikan hasilnya.
+- Penerapan Agglomerative Clustering:
+  - Membuat dendrogram untuk menentukan jumlah klaster optimal.
+  - Menerapkan Agglomerative Clustering dan memvisualisasikan hasilnya.
 
-## Results
-The clustering results are divided into several clusters, each of which has similar poverty characteristics. Based on the clustering results, the following are recommendations for handling poverty in DKI Jakarta:
-### 1. “Very Poor” Cluster (Priority 1)
-Handling Strategy:
-- Improving Access to Education and Health:
-Focus on strengthening basic education and health services in this area. Basic education and good health have a major influence on poverty alleviation efforts in the long run.
-- Provision of Social Assistance:
-Provide direct assistance to poor families to fulfill basic needs such as food, housing, and education.
-- Skills Training Program:
-Provides job skills training to improve the competitiveness of the population in the labor market.
-- Health and Social Security Subsidization:
-Provide more affordable health services, including health insurance, to reduce the financial burden on poor families.
+Setelah wilayah dikelompokkan ke dalam klaster, dilakukan analisis lebih lanjut untuk memberikan rekomendasi strategi penanganan kemiskinan sesuai dengan karakteristik masing-masing klaster.
 
-Rationale:
-Residents in this cluster exhibit very high poverty rates (e.g., more than 10%) and large unemployment rates. They require direct interventions to fulfill their basic needs and open up opportunities for economic improvement. (Source: World Bank, 2021; UNDP, 2020)
+## Hasil dan Rekomendasi
 
-### 2. “Poor” Cluster (Priority 2)
-Handling Strategy:
-- Economic Infrastructure Development:
-Improve basic infrastructure such as roads, electricity, and transportation to open up access to markets and more job opportunities.
-- Local Economic Empowerment:
-Develop micro, small and medium enterprises (MSMEs) and provide business capital to communities to encourage local entrepreneurship and employment.
-- Skills and Further Education Program Development:
-Improve the quality of job skills and further education to enable residents to adapt to the needs of the broader job market.
-- Preventive Health Program:
-Provide preventive health programs and nutrition counseling to reduce expenditures related to health problems that can exacerbate poverty.
+Hasil klasterisasi membagi wilayah menjadi beberapa kelompok dengan karakteristik kemiskinan yang serupa. Berdasarkan hasil tersebut, berikut adalah rekomendasi strategi penanganan kemiskinan di DKI Jakarta:
 
-Rationale:
-The population in this cluster exhibits moderate poverty, but not extreme poverty. Therefore, this approach aims to improve their conditions by providing more access to economic and social opportunities. (Source: ADB, 2020; Bappenas, 2019)
+### 1. Klaster 2 "Sangat Miskin" (Prioritas 1)
+Strategi Penanganan:
+- Meningkatkan Akses Pendidikan dan Kesehatan:
+  Memperkuat layanan pendidikan dasar dan kesehatan sebagai langkah utama dalam upaya pengentasan kemiskinan.
+- Pemberian Bantuan Sosial:
+  Memberikan bantuan langsung kepada keluarga miskin untuk memenuhi kebutuhan dasar seperti pangan, perumahan, dan pendidikan.
+- Program Pelatihan Keterampilan:
+Menyediakan pelatihan keterampilan kerja guna meningkatkan daya saing di pasar tenaga kerja.
+- Subsidi Kesehatan dan Jaminan Sosial:
+Menyediakan layanan kesehatan yang lebih terjangkau, termasuk asuransi kesehatan bagi keluarga miskin.
 
-### 3. “Vulnerable Poor” Cluster (Priority 3)
-Handling Strategy:
-- Strengthening Social and Economic Resilience:
-Focus on improving economic resilience through diversification of income sources and job creation in emerging sectors, such as digital and technology.
-- Social Protection and Insurance Programs:
-Provide social protection, such as unemployment insurance or emergency funds, to reduce vulnerability to economic shocks.
-- Financing and Business Credit Facilities:
-Introduce more accessible financing schemes for small and medium-sized enterprises, as well as new entrepreneurs.
-- Counseling on Financial Management and Investment:
-Provide training on family financial management and long-term planning.
+Penduduk dalam klaster ini memiliki tingkat kemiskinan yang sangat tinggi (>10%) dan angka pengangguran yang besar. Mereka membutuhkan intervensi langsung untuk memenuhi kebutuhan dasar dan meningkatkan peluang ekonomi. (Sumber: World Bank, 2021; UNDP, 2020)
 
-Rationale:
-Although not identified as poor, residents in this cluster are vulnerable to economic downturns. They need more proactive strategies to maintain financial stability and prevent a slide into poverty. (Source: ILO, 2019; BPS, 2021)
+## 2. Klaster 0 "Miskin" (Prioritas 2)
+Strategi Penanganan:
+- Pembangunan Infrastruktur Ekonomi:
+Meningkatkan infrastruktur dasar seperti jalan, listrik, dan transportasi untuk membuka akses pasar dan lapangan kerja.
+- Pemberdayaan Ekonomi Lokal:
+Mendorong usaha mikro, kecil, dan menengah (UMKM) serta memberikan modal usaha untuk mengembangkan wirausaha lokal.
+- Pengembangan Program Pendidikan dan Keterampilan:
+Meningkatkan kualitas pelatihan kerja dan pendidikan lanjutan agar penduduk dapat beradaptasi dengan pasar tenaga kerja yang lebih luas.
+- Program Kesehatan Preventif:
+Memberikan program kesehatan preventif dan penyuluhan gizi untuk mengurangi pengeluaran akibat masalah kesehatan.
 
-Conclusion: Each cluster has different needs and challenges. Therefore, the treatment strategies offered are organized based on the priorities and conditions of each cluster, from direct intervention for the very poor, to increasing economic resilience for the vulnerable poor. These strategies aim to create better conditions and prevent deeper poverty for all community groups.
+Penduduk dalam klaster ini memiliki tingkat kemiskinan sedang, tetapi tidak ekstrem. Strategi ini bertujuan untuk memperbaiki kondisi mereka dengan membuka akses ke peluang ekonomi dan sosial. (Sumber: ADB, 2020; Bappenas, 2019)
 
-# Contact
-For further questions or suggestions, contact me at anasafira579@gmail.com
+### 3. Klaster 0 "Rentan Miskin" (Prioritas 3)
+Strategi Penanganan:
+- Memperkuat Ketahanan Sosial dan Ekonomi:
+Mendorong diversifikasi sumber pendapatan dan menciptakan lapangan kerja di sektor-sektor baru seperti digital dan teknologi.
+- Program Perlindungan Sosial dan Asuransi:
+Memberikan perlindungan sosial seperti asuransi pengangguran atau dana darurat untuk mengurangi kerentanan terhadap guncangan ekonomi.
+- Fasilitas Pembiayaan dan Kredit Usaha:
+Menyediakan skema pembiayaan yang lebih mudah diakses bagi UMKM dan wirausahawan baru.
+- Penyuluhan Manajemen Keuangan dan Investasi:
+Memberikan pelatihan tentang manajemen keuangan keluarga dan perencanaan jangka panjang.
+
+Penduduk dalam klaster ini belum tergolong miskin, tetapi rentan terhadap penurunan ekonomi. Strategi yang proaktif diperlukan untuk menjaga stabilitas keuangan mereka dan mencegah jatuh ke dalam kemiskinan. (Sumber: ILO, 2019; BPS, 2021)
+
+## Kesimpulan
+Setiap klaster memiliki kebutuhan dan tantangan yang berbeda. Oleh karena itu, strategi penanganan disusun berdasarkan prioritas dan kondisi masing-masing klaster, mulai dari intervensi langsung bagi kelompok sangat miskin hingga penguatan ketahanan ekonomi bagi kelompok rentan miskin. Strategi ini bertujuan untuk menciptakan kondisi yang lebih baik dan mencegah kemiskinan yang lebih dalam bagi seluruh lapisan masyarakat.
+
+# Kontak
+Untuk pertanyaan atau saran lebih lanjut, hubungi saya di anasafira579@gmail.com.
